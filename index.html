@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0d1728">
+  <meta name="description" content="CGU Atlas: centro independente de estudos para AFFC Auditoria, com TEC, SRS, questões e planejamento.">
+  <title>CGU Atlas · Imersão AFFC Auditoria</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e253b'/%3E%3Cpath d='M17 32l10 10 20-22' stroke='%235de4c7' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><span class="brand-symbol">A<span>.</span></span><div><strong>CGU ATLAS</strong><small>CENTRO DE IMERSÃO</small></div></div>
+      <div class="side-eyebrow">PAINEL</div>
+      <nav id="nav" aria-label="Navegação principal">
+        <button data-view="dashboard" class="nav-item active"><span>◫</span> Visão geral</button>
+        <button data-view="today" class="nav-item"><span>◉</span> Missão do dia</button>
+        <button data-view="reviews" class="nav-item"><span>↻</span> Revisões SRS <em id="due-pill"></em></button>
+        <button data-view="quiz" class="nav-item"><span>☑</span> Questões C/E</button>
+        <button data-view="tec" class="nav-item"><span>▦</span> Cadernos TEC</button>
+        <button data-view="topics" class="nav-item"><span>☷</span> Edital & tópicos</button>
+        <div class="side-eyebrow side-lower">ESTRATÉGIA</div>
+        <button data-view="calendar" class="nav-item"><span>▤</span> Calendário</button>
+        <button data-view="difficulty" class="nav-item"><span>◈</span> Mapa de dificuldades</button>
+        <button data-view="report" class="nav-item"><span>▥</span> Relatório semanal</button>
+        <button data-view="settings" class="nav-item"><span>⚙</span> Dados & ajustes</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="countdown-box"><small>PROVA OBJETIVA + DISCURSIVA</small><div><b id="daysleft">28</b><span>dias restantes</span></div><div class="countdown-line"><span id="dayprogress"></span></div><small>13 DEZ 2026 · CEBRASPE</small></div>
+        <div class="side-foot">Foco exclusivo CGU 2026<br>Versão local · seus dados no navegador</div>
+      </div>
+    </aside>
+    <div class="main-wrapper">
+      <header class="topbar">
+        <div class="top-left"><button class="mobile-toggle" id="menu-toggle" aria-label="Abrir navegação">☰</button><div class="crumb"><span>CGU 2026</span><span class="sep">/</span><b id="current-title">Visão geral</b></div></div>
+        <div class="top-actions"><span class="target-pill">AFFC · AUDITORIA</span><button class="btn btn-ghost small" id="backup-top" title="Exportar cópia JSON">⇩ <span>Backup</span></button><span class="avatar">CGU</span></div>
+      </header>
+      <div class="announcement" id="offline-banner">ARMAZENAMENTO LOCAL · Os registros ficam neste navegador; exporte um backup para preservar seu histórico. TEC e ChatGPT não sincronizam automaticamente.</div>
+      <main id="app" tabindex="-1"></main>
+      <footer class="footer">CGU ATLAS · Aplicação independente, não afiliada ao Centurio, Cebraspe, CGU ou TEC Concursos. <a href="https://www.cebraspe.org.br/concursos/CGU_26_AFFC" target="_blank" rel="noreferrer">Edital oficial ↗</a></footer>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-root" class="modal-root" aria-live="polite"></div>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+  <script src="data/seed.js"></script>
+  <script src="data/questions.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
