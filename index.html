@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0d1728">
-  <meta name="description" content="CGU Atlas: centro independente de estudos para AFFC Auditoria, com TEC, SRS, questões e planejamento.">
+  <meta name="description" content="CGU Atlas: controle de estudos exclusivamente por cadernos TEC, com ranking, revisões e planejamento.">
   <title>CGU Atlas · Imersão AFFC Auditoria</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e253b'/%3E%3Cpath d='M17 32l10 10 20-22' stroke='%235de4c7' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/app.css">
@@ -17,9 +17,8 @@
       <nav id="nav" aria-label="Navegação principal">
         <button data-view="dashboard" class="nav-item active"><span>◫</span> Visão geral</button>
         <button data-view="today" class="nav-item"><span>◉</span> Missão do dia</button>
-        <button data-view="reviews" class="nav-item"><span>↻</span> Revisões SRS <em id="due-pill"></em></button>
-        <button data-view="quiz" class="nav-item"><span>☑</span> Questões C/E</button>
-        <button data-view="tec" class="nav-item"><span>▦</span> Cadernos TEC</button>
+        <button data-view="reviews" class="nav-item"><span>↻</span> Revisões TEC <em id="due-pill"></em></button>
+                <button data-view="tec" class="nav-item"><span>▦</span> Cadernos TEC</button>
         <button data-view="topics" class="nav-item"><span>☷</span> Edital & tópicos</button>
         <div class="side-eyebrow side-lower">ESTRATÉGIA</div>
         <button data-view="calendar" class="nav-item"><span>▤</span> Calendário</button>
@@ -46,7 +45,6 @@
   <div id="modal-root" class="modal-root" aria-live="polite"></div>
   <input id="import-file" type="file" accept=".json,application/json" hidden>
   <script src="data/seed.js"></script>
-  <script src="data/questions.js"></script>
   <script src="assets/app.js"></script>
 </body>
 </html>
